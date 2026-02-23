@@ -916,8 +916,10 @@ def main():
     if x_source == 'bird':
         if available == 'reddit':
             available = 'both'  # Now have both Reddit + X (via Bird)
+        elif available == 'reddit-web':
+            available = 'all'  # Reddit + X (Bird) + Web
         elif available == 'web':
-            available = 'x'  # Now have X via Bird
+            available = 'x-web'  # Now have X via Bird plus Web
 
     # Mock mode can work without keys
     if args.mock:
